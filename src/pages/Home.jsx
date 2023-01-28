@@ -27,7 +27,7 @@ const Home = () => {
 	// current user
 	const { email } = useUser();
 
-	// username from users database
+	// database from users database
 	const usersDatabase = useRef({});
 
 	// get users database
@@ -137,10 +137,6 @@ const Home = () => {
 										</div>
 									)}
 									<p className="px-2">{e.textStory}</p>
-								</div>
-
-								<div className="px-2">
-									<button className="font-bold">See Comments...</button>
 								</div>
 							</div>
 						);
