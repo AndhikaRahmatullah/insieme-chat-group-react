@@ -6,6 +6,7 @@ import { useUser } from "../context/user";
 import useGetDatabase from "../hooks/useGetDatabase";
 import { SignOut as Keluar } from "../services/database";
 import { motion, AnimatePresence } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Home = () => {
 	const username = useRef("");
@@ -129,7 +130,7 @@ const Home = () => {
 								<div className="flex flex-col gap-3">
 									{e.imageStory && (
 										<div className="flex justify-center">
-											<img
+											<LazyLoadImage
 												src={e.imageStory}
 												alt={`imageby${e.creatorUsername}`}
 												className="w-fit max-w-[700px]"
